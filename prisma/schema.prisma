@@ -22,7 +22,7 @@ model User {
 model Post {
   id Int @id @default(autoincrement())
   title String?
-  string String @db.VarChar(255)
+  content String @db.VarChar(255)
   userId Int
   author User @relation(fields: [userId], references: [id])
 

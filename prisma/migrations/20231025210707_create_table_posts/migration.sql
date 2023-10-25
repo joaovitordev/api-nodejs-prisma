@@ -2,7 +2,7 @@
 CREATE TABLE `posts` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(191) NULL,
-    `string` VARCHAR(255) NOT NULL,
+    `content` VARCHAR(255) NOT NULL,
     `userId` INTEGER NOT NULL,
 
     PRIMARY KEY (`id`)
