@@ -14,6 +14,17 @@ model User {
   id Int @id @default(autoincrement())
   name String?
   email String @unique
+  Post Post[]
 
   @@map("users")
+}
+
+model Post {
+  id Int @id @default(autoincrement())
+  title String?
+  string String @db.VarChar(255)
+  userId Int
+  author User @relation(fields: [userId], references: [id])
+
+  @@map("posts")
 }
